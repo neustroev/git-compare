@@ -1,1 +1,25 @@
 #!/bin/bash
+
+branch=$(git symbolic-ref --short -q HEAD);
+gitUrl=$(git config --get remote.origin.url);
+
+if [[ $gitUrl =~ ^https ]];
+then
+  echo 'https urls not implemented';
+  exit 1;
+elif [[ $gitUrl =~ ^git@github\.com:(.*)\.git ]];
+then  
+  read user repo <<< $(echo ${BASH_REMATCH[1]//\// });
+fi
+
+url=http://www.github.com/$user/$repo/compare/$branch
+
+if which xdg-open > /dev/null
+then
+  xdg-open $url
+elif which gnome-open > /dev/null
+then
+  gnome-open $url
+else
+  open $url
+fi
