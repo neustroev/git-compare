@@ -2,19 +2,24 @@
 
 **TODO: installation script**
 
-* Copy this repository with 
+### Step 1
+Copy this repository with 
 ```
 git clone git@github.com:neustroev/git-compare.git
 ```
 
-* a. Copy `git-compare` file to a folder from your `$PATH`.
-  b. Add repository folder to your path by adding
-```
-  PATH=$PATH:path/to/git-compare
-```
-to your `~/.bashrc`, `~/.zshrc`, etc.
+### Step 2
+Copy `git-compare` file to a folder from your `$PATH`
 
-* Restart your terminal.
+**OR**
+
+Add repository folder to your path by adding this to your `~/.bashrc`, `~/.zshrc`, etc:
+```
+PATH=$PATH:path/to/git-compare
+```
+
+### Step 3
+Restart your terminal.
 
 #Usage
 When in a git repository folder, in your terminal:
