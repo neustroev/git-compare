@@ -9,14 +9,8 @@ branch=$( \
 
 remote_url=$(git config --get remote.origin.url);
 
-if [[ $remote_url =~ ^https ]];
-then
-  echo 'https urls not implemented';
-  exit 1;
-elif [[ $remote_url =~ ^git@github\.com:(.*)\.git ]];
-then  
-  read user repo <<< $(echo ${BASH_REMATCH[1]//\// });
-fi
+[[ $remote_url =~ github.com[/:](.*)\.git ]] && \
+read user repo <<< $(echo ${BASH_REMATCH[1]//\// });
 
 compare=$( \
   [ ! -z "$base" ] \
@@ -24,14 +18,14 @@ compare=$( \
   || echo $branch \
 );
 
-gitUrl=https://github.com/$user/$repo/compare/$compare;
+git_url=https://github.com/$user/$repo/compare/$compare;
 
 if which xdg-open > /dev/null
 then
-  xdg-open $gitUrl
+  xdg-open $gir_url
 elif which gnome-open > /dev/null
 then
-  gnome-open $gitUrl
+  gnome-open $git_url
 else
-  open $gitUrl
+  open $git_url
 fi
