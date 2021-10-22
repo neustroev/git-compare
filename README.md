@@ -1,14 +1,14 @@
-#Installation
+# Installation
 
 **TODO: installation script**
 
-### Step 1
+## Step 1
 Copy this repository with 
 ```
 git clone git@github.com:neustroev/git-compare.git
 ```
 
-### Step 2
+## Step 2
 Copy `git-compare` file to a folder from your `$PATH`
 
 **OR**
@@ -18,10 +18,10 @@ Add repository folder to your path by adding this to your `~/.bashrc`, `~/.zshrc
 PATH=$PATH:path/to/git-compare
 ```
 
-### Step 3
+## Step 3
 Restart your terminal.
 
-#Usage
+# Usage
 When in a git repository folder, in your terminal:
 
 * `git compare` - to view diff for current remote branch with default base.
