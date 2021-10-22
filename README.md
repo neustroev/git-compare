@@ -1,3 +1,10 @@
+# Usage
+When in a git repository folder, in your terminal:
+
+* `git compare` - to view diff for current remote branch with default base.
+* `git compare <base>` - to view diff for current remote branch with selected base.
+* `git compare <base> <branch>` - to view for selected branch with selected base.
+
 # Installation
 
 **TODO: installation script**
@@ -20,10 +27,3 @@ PATH=$PATH:path/to/git-compare
 
 ## Step 3
 Restart your terminal.
-
-# Usage
-When in a git repository folder, in your terminal:
-
-* `git compare` - to view diff for current remote branch with default base.
-* `git compare <base>` - to view diff for current remote branch with selected base.
-* `git compare <base> <branch>` - to view for selected branch with selected base.
